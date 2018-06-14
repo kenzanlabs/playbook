@@ -8,7 +8,11 @@ RUN npm install -g serve
 ADD ./ /playbook
 
 #TESTS
-RUN export CI=true && cd /playbook && npm run-script test
+
+RUN export CI=true && \
+  cd /playbook && \
+  npm install && \
+  npm run-script test
 
 #BUILD
 RUN cd /playbook && npm run-script build
