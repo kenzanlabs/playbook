@@ -2,22 +2,40 @@ import React from "react";
 import Slider from "react-slick";
 
 export default class ContentSlider extends React.Component {
+    constructor(props) {
+      super(props);
+
+      this.handleKeyDown = this.handleKeyDown.bind(this);
+    }
+
+    handleKeyDown(e) {
+      if(e.key === 'ArrowRight'){
+        this.slider.slickNext();
+      } else if(e.key === 'ArrowLeft'){
+        this.slider.slickPrev();
+      }
+    }
+
     // As soon as the component mounts, `mySlider` will be focused.
     componentDidMount() {
+      document.addEventListener("keydown", this.handleKeyDown);
+    }
+
+    componentWillUnmount() {
+      document.removeEventListener("keydown", this.handleKeyDown);
     }
 
     render() {
         var settings = {
             dots: true,
+            fade: true,
             infinite: true,
-            speed: 500,
+            speed: 1000,
             slidesToShow: 1,
-            slidesToScroll: 1,
-            bool: true,
-            focusOnSelect: true
+            slidesToScroll: 1
         };
         return (
-            <Slider {...settings}>
+            <Slider  ref={slider => (this.slider = slider)} {...settings}>
                 <div>
                     <h3>Prepare backlog</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur, dolor non pharetra fermentum, odio lorem euismod tellus, in volutpat augue lectus eget nunc. Nullam mattis pulvinar tristique. Fusce convallis, orci id auctor sodales, quam dolor viverra nisi, et posuere magna nisl ac nisl. Aenean hendrerit sollicitudin ornare.
