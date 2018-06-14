@@ -78,3 +78,4 @@ describe('<ContentSlider /> Component', () => {
     });
   });
 });
+

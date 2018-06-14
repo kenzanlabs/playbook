@@ -28,12 +28,11 @@ export default class ContentSlider extends React.Component {
     render() {
         var settings = {
             dots: true,
+            fade: true,
             infinite: true,
-            speed: 500,
+            speed: 1000,
             slidesToShow: 1,
-            slidesToScroll: 1,
-            bool: true,
-            focusOnSelect: true
+            slidesToScroll: 1
         };
         return (
             <Slider  ref={slider => (this.slider = slider)} {...settings}>

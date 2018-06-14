@@ -1,20 +1,35 @@
+.slick-slider {
+    padding-top:60px;
+    text-align: left;
+}
 .slick-prev:before, .slick-next:before {
     color: black;
+    font-size: 40px;
+
 }
 
 .slick-arrow {
     height: 50px;
     width: 50px;
-    font-size: 40px;
 }
 .slick-prev {
-    left: -60px;
+    left: -80px;
 
 }
 .slick-next {
-    right: -60px;
+    right: -80px;
+}
+.slick-dots {
+    top: 30px;
+}
+.slick-dots li {
+    margin: 0 15px;
+}
+.slick-dots li button {
+    width: 0px;
+    height: 30px;
 }
 
 .slick-dots li button:before {
-    font-size:30px;
+    font-size:20px;
 }
