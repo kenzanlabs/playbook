@@ -134,16 +134,23 @@ export default class ContentSlider extends React.Component {
                     </div>
                 </div>
                 <div>
-                    <h3>Done with CI [Accepted]</h3>
+                <h3>Done with CI [Accepted]</h3>
+                <div>
+                    The Done phase of the lifecyle can be broken into a few steps:
+                    <ul>
+                        <li>Approving PR</li>
+                        <li>Merging PR</li>
+                        <li>Deploying PR</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Summary</h3>
                     <div>
-                        The Done phase of the lifecyle can be broken into a few steps:
-                        <ul>
-                            <li>Approving PR</li>
-                            <li>Merging PR</li>
-                            <li>Deploying PR</li>
-                        </ul>
+                        Summary
+
                     </div>
                 </div>
+            </div>
             </Slider>
         );
     }
