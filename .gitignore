@@ -1,10 +1,3 @@
-logs/*
-!.gitkeep
-node_modules/
-bower_components/
-tmp
-.DS_Store
-.idea
-.iml*
+.env
 build
-coverage
+node_modules
