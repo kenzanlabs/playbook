@@ -24,7 +24,7 @@ repo.updateStatus(sha_commit, {
   "description": "The build succeeded!",
   "context": "gcr.io/kzn-appsruntime-techradar/github-kenzanlabs-playbook"
 }).then((resp) => {
-  console.log(resp);
+  console.log('%s: %s', resp.status, resp.statusText);
 }, (error) => {
   console.log(error);
 });
