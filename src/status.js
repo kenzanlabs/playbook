@@ -2,7 +2,6 @@ var GitHub = require('github-api');
 
 var args = process.argv.slice(2);
 
-console.log('args: ' + args);
 if(args < 1){
   console.log('Dude.  Missing the sha-commit!');
   console.log('  - Usage: status.js <sha-commit>');
