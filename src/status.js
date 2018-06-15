@@ -1,5 +1,16 @@
 var GitHub = require('github-api');
 
+var args = process.argv.slice(2);
+
+console.log('args: ' + args);
+if(args < 1){
+  console.log('Dude.  Missing the sha-commit!');
+  console.log('  - Usage: status.js <sha-commit>');
+  throw 'Malformed Input Dr. Spock :( :(';
+}
+
+var sha_commit = args[0];
+
 var oauthToken = process.env.OAUTH_TOKEN;
 // unauthenticated client
 const gh = new GitHub({
@@ -8,7 +19,7 @@ const gh = new GitHub({
 
 
 var repo = gh.getRepo('jon077','playbook');
-repo.updateStatus('55696a66cb4026f0a9b6670f87e72c924dba15da', {
+repo.updateStatus(sha_commit, {
   "state": "success",
   "target_url": "https://example.com/build/status",
   "description": "The build succeeded!",
