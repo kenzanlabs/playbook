@@ -5,8 +5,8 @@ steps:
   args:
   - kms
   - decrypt
-  - --ciphertext-file=.env.json.enc
-  - --plaintext-file=env.json
+  - --ciphertext-file=.env.enc
+  - --plaintext-file=.env
   - --location=global
   - --keyring=kzn-playbook
   - --key=kzn-playbook-build-key
