@@ -1,8 +1,8 @@
 FROM node:10
 
 ARG sha_commit
-ARG _OWNER
-ARG _REPO
+ARG owner
+ARG repo
 
 
 RUN echo "SHA_COMMIT: $sha_commit"
@@ -21,7 +21,7 @@ RUN export CI=true && \
 
 #TESTS PASS, CALL COMMIT API TO MARK PASSING build
 RUN . /playbook/.env && \
-  node /playbook/src/status.js $_OWNER $_REPO $sha_commit
+  node /playbook/src/status.js $owner $repo $sha_commit
 
 RUN cd /playbook && rm .env
 
