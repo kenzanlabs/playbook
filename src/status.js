@@ -9,7 +9,7 @@ if(args < 3){
 }
 
 var owner = args[0];
-var repo = args[1];
+var repo_name = args[1];
 var sha_commit = args[2];
 
 var oauthToken = process.env.OAUTH_TOKEN;
@@ -24,7 +24,7 @@ repo.updateStatus(sha_commit, {
   "state": "success",
   "target_url": "https://example.com/build/status",
   "description": "The build succeeded!",
-  "context": "gcr.io/kzn-appsruntime-techradar/github-" + owner + "-" + repo
+  "context": "gcr.io/kzn-appsruntime-techradar/github-" + owner + "-" + repo_name
 }).then((resp) => {
   console.log('%s: %s', resp.status, resp.statusText);
 }, (error) => {
