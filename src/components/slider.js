@@ -40,9 +40,9 @@ export default class ContentSlider extends React.Component {
                     <img className="process" src="/images/process.png" alt="Kenzan Agile process" />
                     <h2 className="section-header capitalize">Who are we?</h2>
                     <ul>
-                        <li>Chief Technology Officer - Jon Stockdill</li>
-                        <li>Director of PMBA - Jen Aczualdez</li>
-                        <li>Director of Engineering - Scott Pullano</li>
+                        <li>Chief Technology Officer - <i>Jon Stockdill</i></li>
+                        <li>Director of PMBA - <i>Jen Aczualdez</i></li>
+                        <li>Director of Engineering - <i>Scott Pullano</i></li>
                     </ul>
                     <h2 className="section-header capitalize">Who is Kenzan and what do we Do?</h2>
                     <ul>
