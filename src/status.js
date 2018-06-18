@@ -19,7 +19,7 @@ const gh = new GitHub({
 });
 
 
-var repo = gh.getRepo(owner,repo);
+var repo = gh.getRepo(owner,repo_name);
 repo.updateStatus(sha_commit, {
   "state": "success",
   "target_url": "https://example.com/build/status",
