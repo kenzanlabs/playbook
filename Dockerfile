@@ -1,6 +1,8 @@
 FROM node:10
 
 ARG sha_commit
+ARG _OWNER
+ARG _REPO
 
 
 RUN echo "SHA_COMMIT: $sha_commit"
