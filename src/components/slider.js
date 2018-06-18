@@ -30,47 +30,122 @@ export default class ContentSlider extends React.Component {
             dots: true,
             fade: true,
             infinite: true,
-            speed: 1000,
+            speed: 800,
             slidesToShow: 1,
             slidesToScroll: 1
         };
         return (
             <Slider  ref={slider => (this.slider = slider)} {...settings}>
-                <div>
-                    <h3>Prepare backlog</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consectetur, dolor non pharetra fermentum, odio lorem euismod tellus, in volutpat augue lectus eget nunc. Nullam mattis pulvinar tristique. Fusce convallis, orci id auctor sodales, quam dolor viverra nisi, et posuere magna nisl ac nisl. Aenean hendrerit sollicitudin ornare.
-                        Nunc a enim laoreet, mollis arcu id, varius dolor. Pellentesque enim ipsum, sollicitudin in venenatis quis, maximus id nunc. Fusce ut blandit lorem, in euismod ipsum. In hac habitasse platea dictumst.
-
-                        Suspendisse in rhoncus urna, et vulputate ipsum. Sed ultricies orci in massa euismod, eleifend interdum mauris faucibus.
-                        Cras ornare est vitae ligula pretium aliquet. Aenean eget erat ut elit dictum gravida. Aliquam neque purus, dignissim vel neque vitae, condimentum hendrerit enim. Sed pretium scelerisque mauris quis gravida. Curabitur luctus consectetur vestibulum. Sed ac nisl id sapien sodales fringilla tristique ac sapien. Aliquam et mauris quam.</p>
+                <div className="App-section intro">
+                    <img className="process" src="/images/process.png" alt="Kenzan Agile process" />
+                    <h2 className="section-header capitalize">Who are we?</h2>
+                    <ul>
+                        <li>Chief Technology Officer - <i>Jon Stockdill</i></li>
+                        <li>Director of PMBA - <i>Jen Aczualdez</i></li>
+                        <li>Director of Engineering - <i>Scott Pullano</i></li>
+                    </ul>
+                    <h2 className="section-header capitalize">Who is Kenzan and what do we Do?</h2>
+                    <ul>
+                        <li>Software engineering and full service digital consulting firm</li>
+                        <li>Application / platform development, architecture consulting, and digital transformation</li>
+                        <li>Provides custom E2E solutions that align technical strategy with business goals</li>
+                        <li>Craft solutions leveraging cutting-edge technology</li>
+                    </ul>
                 </div>
-                <div>
-                    <h3>Backlog</h3>
-                    <p>Fusce nunc ipsum, sagittis eu sollicitudin sit amet, faucibus id lorem. Vivamus et luctus nisi. Suspendisse feugiat, nulla in luctus pellentesque, dui turpis bibendum dui, sit amet consequat risus elit sit amet tortor. Maecenas vel magna massa. Integer vitae odio ultricies, lobortis neque eu, porttitor felis. Praesent tincidunt diam id purus maximus rhoncus. Integer id ex vitae quam cursus condimentum sed quis nisi. Nam tincidunt ante felis, at consectetur est elementum ut. Nunc quis augue non leo condimentum tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus ultricies rhoncus tellus, fermentum faucibus lectus vestibulum at. Morbi et quam arcu. Pellentesque augue urna, facilisis nec tincidunt vel, tristique quis lacus.
-
-                        Etiam ac enim a nisl mattis tempus. Nam sit amet sapien enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam auctor sed sapien in malesuada. Etiam mauris erat, venenatis sed tristique eu, facilisis nec lacus. Etiam condimentum augue quis feugiat condimentum. Nulla facilisis erat est, eget ornare elit finibus ut. Pellentesque aliquam bibendum ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel dolor nibh. Mauris lacus sapien, laoreet ut mauris nec, gravida rutrum quam. Suspendisse potenti.</p>
+                <div className="App-section intro">
+                    <img className="ci" src="/images/continuous.png" alt="Continuous Delivery (© Thoughtworks)" />
+                    <h2 className="section-header capitalize">The PMBA role expanded:</h2>
+                    <ul>
+                        <li>Relies heavily on agile methodology & scrum framework</li>
+                        <li>Minimize risks to schedule delays, budget overruns, quality issues, and scope creep</li>
+                        <li>Facilitate project-related communication (including cross-functional communication)</li>
+                        <li>Maximize project team participation and ownership</li>
+                        <li>Standardize processes to manage client expectation</li>
+                    </ul>
+                    <h2 className="section-header capitalize">What is Continuous Integration?</h2>
+                    <ul>
+                        <li>Development practice of integrating code multiple times a day</li>
+                        <li>Automating testing and builds on each commit</li>
+                        <li>Identifies issues much quicker in the process</li>
+                        <li>Makes locating issues significantly easier</li>
+                    </ul>
                 </div>
-                <div>
-                    <h3>Defined</h3>
-                    <p>Integer volutpat semper enim. Fusce sodales nec velit ac luctus. Suspendisse faucibus, velit id congue dapibus, tortor tellus consequat odio, vitae tristique justo est sed orci. Cras convallis ligula dui, ac feugiat nulla laoreet scelerisque. Morbi sed quam sit amet orci hendrerit sagittis. Aenean imperdiet eros quis tortor convallis, id viverra massa luctus. Nam blandit sapien vel lacus porttitor eleifend. Fusce aliquam in ligula vitae vulputate. Sed fringilla finibus metus ac fringilla. Nulla at dui ac elit interdum mollis. Morbi varius tincidunt orci ac finibus. Cras non fermentum magna. Aenean in vestibulum leo. Phasellus sit amet molestie massa. Nulla vulputate justo in risus mollis semper. Ut placerat purus porta enim volutpat tempus.</p>
+                <div className="App-section planning">
+                    <h2 className="section-header capitalize">Planning</h2>
+                    <div>
+                        Good projects have dedicated cadences for planning.  This includes Backlog Refinement and Sprint Planning.
+                        <img className="planningprocess" src="/images/planning.png" alt="Planning Process" />
+                        <h3 className="section-subheader">Backlog Refinement</h3>
+                        <ul>
+                            <li>PO owns the backlog</li>
+                            <li>Scrum Master works with PO to prioritize the backlog</li>
+                            <li>PO ensures all tickets in upcoming sprint are in solid shape</li>
+                        </ul>
+                        <h3 className="section-subheader">Sprint Planning</h3>
+                        <ul>
+                            <li>Explain purpose / scope of each feature </li>
+                            <li>Provide estimates for effort</li>
+                            <li>Break apart large user stories</li>
+                            <li>Review deliverables and commit to what will be worked on</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <h3>In-progress</h3>
-                    <p>Fusce nunc ipsum, sagittis eu sollicitudin sit amet, faucibus id lorem. Vivamus et luctus nisi. Suspendisse feugiat, nulla in luctus pellentesque, dui turpis bibendum dui, sit amet consequat risus elit sit amet tortor. Maecenas vel magna massa. Integer vitae odio ultricies, lobortis neque eu, porttitor felis. Praesent tincidunt diam id purus maximus rhoncus. Integer id ex vitae quam cursus condimentum sed quis nisi. Nam tincidunt ante felis, at consectetur est elementum ut. Nunc quis augue non leo condimentum tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus ultricies rhoncus tellus, fermentum faucibus lectus vestibulum at. Morbi et quam arcu. Pellentesque augue urna, facilisis nec tincidunt vel, tristique quis lacus.
-
-                        Etiam ac enim a nisl mattis tempus. Nam sit amet sapien enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam auctor sed sapien in malesuada. Etiam mauris erat, venenatis sed tristique eu, facilisis nec lacus. Etiam condimentum augue quis feugiat condimentum. Nulla facilisis erat est, eget ornare elit finibus ut. Pellentesque aliquam bibendum ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel dolor nibh. Mauris lacus sapien, laoreet ut mauris nec, gravida rutrum quam. Suspendisse potenti.</p>
+                <div className="App-section dev-ci">
+                    <h2 className="section-header capitalize">Development with Continuous Integration</h2>
+                    <div>
+                        <img className="tools" src="/images/gears.png" alt="Gears" />
+                        <p>At Kenzan, Continuous Integration (CI) plays a crucial role</p>
+                        <h3 className="section-subheader">What happens in this phase?</h3>
+                        <ul>
+                            <li>Creating a feature branch</li>
+                            <li>Writing code & tests</li>
+                            <li>Local testing</li>
+                            <li>Commiting changes to source control</li>
+                            <li>Creating pull requests</li>
+                        </ul>
+                        <h3 className="section-subheader">Tools</h3>
+                        <ul>
+                            <li>Git</li>
+                            <li>Github</li>
+                            <li>Spinnaker</li>
+                            <li>Jenkins</li>
+                            <li>Google Cloud (GCP)</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <h3>Completed</h3>
-                    <p>Fusce nunc ipsum, sagittis eu sollicitudin sit amet, faucibus id lorem. Vivamus et luctus nisi. Suspendisse feugiat, nulla in luctus pellentesque, dui turpis bibendum dui, sit amet consequat risus elit sit amet tortor. Maecenas vel magna massa. Integer vitae odio ultricies, lobortis neque eu, porttitor felis. Praesent tincidunt diam id purus maximus rhoncus. Integer id ex vitae quam cursus condimentum sed quis nisi. Nam tincidunt ante felis, at consectetur est elementum ut. Nunc quis augue non leo condimentum tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus ultricies rhoncus tellus, fermentum faucibus lectus vestibulum at. Morbi et quam arcu. Pellentesque augue urna, facilisis nec tincidunt vel, tristique quis lacus.
-
-                        Etiam ac enim a nisl mattis tempus. Nam sit amet sapien enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam auctor sed sapien in malesuada. Etiam mauris erat, venenatis sed tristique eu, facilisis nec lacus. Etiam condimentum augue quis feugiat condimentum. Nulla facilisis erat est, eget ornare elit finibus ut. Pellentesque aliquam bibendum ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel dolor nibh. Mauris lacus sapien, laoreet ut mauris nec, gravida rutrum quam. Suspendisse potenti.</p>
+                <div className="App-section review-ci">
+                    <h2 className="section-header capitalize">Review Process</h2>
+                    <div>
+                        <img className="improvement" src="/images/continuousimprovement.png" alt="Continuous Improvement" />
+                        <h3 className="section-subheader">What happens in this phase?</h3>
+                        <ul>
+                            <li>Reviewing code</li>
+                            <li>Collaborating on feedback</li>
+                            <li>Resolving integrated build failures</li>
+                            <li>Resolving unit / integrated test failures</li>
+                            <li>Resolving bugs / gaps</li>
+                            <li>Resolving conflicts</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <h3>Accepted</h3>
-                    <p>Fusce nunc ipsum, sagittis eu sollicitudin sit amet, faucibus id lorem. Vivamus et luctus nisi. Suspendisse feugiat, nulla in luctus pellentesque, dui turpis bibendum dui, sit amet consequat risus elit sit amet tortor. Maecenas vel magna massa. Integer vitae odio ultricies, lobortis neque eu, porttitor felis. Praesent tincidunt diam id purus maximus rhoncus. Integer id ex vitae quam cursus condimentum sed quis nisi. Nam tincidunt ante felis, at consectetur est elementum ut. Nunc quis augue non leo condimentum tristique. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus ultricies rhoncus tellus, fermentum faucibus lectus vestibulum at. Morbi et quam arcu. Pellentesque augue urna, facilisis nec tincidunt vel, tristique quis lacus.
-
-                        Etiam ac enim a nisl mattis tempus. Nam sit amet sapien enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam auctor sed sapien in malesuada. Etiam mauris erat, venenatis sed tristique eu, facilisis nec lacus. Etiam condimentum augue quis feugiat condimentum. Nulla facilisis erat est, eget ornare elit finibus ut. Pellentesque aliquam bibendum ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel dolor nibh. Mauris lacus sapien, laoreet ut mauris nec, gravida rutrum quam. Suspendisse potenti.</p>
+                <div className="App-section done-ci">
+                    <h2 className="section-header capitalize">Done</h2>
+                    <div>
+                        <img className="done" src="/images/dod.png" alt="Definition of Done" />
+                        <p>Done can have a very different meaning to different organizations. </p>
+                        <h3 className="section-subheader">Kenzan's Definition of Done</h3>
+                        <ul>
+                            <li>Approved pull request</li>
+                            <li>Merged pull request</li>
+                            <li>Deployed Feature (Not necessarily to production!)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="App-section summary">
+                    <h2 className="section-header capitalize">In Summary</h2>
+                    <div>
+                        Summary
+                    </div>
                 </div>
             </Slider>
         );
