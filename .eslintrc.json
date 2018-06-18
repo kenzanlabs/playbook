@@ -1,0 +1,16 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "no-console": "off",
+    "strict": ["error", "global"],
+    "curly": "warn",
+    "react/jsx-filename-extension": "off",
+    "max-len": "off",
+    "react/no-unescaped-entities" : "off",
+    "no-return-assign" : "off"
+  }
+}

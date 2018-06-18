@@ -1,37 +1,35 @@
-var GitHub = require('github-api');
+const GitHub = require('github-api');
 
-var args = process.argv.slice(2);
+const args = process.argv.slice(2);
 
-if(args < 3){
+if (args < 3) {
   console.log('Dude.  Missing the sha-commit!');
   console.log('  - Usage: status.js <sha-commit>');
   throw 'Malformed Input Dr. Spock :( :(';
 }
 
-var owner = args[0];
-var repo_name = args[1];
-var sha_commit = args[2];
+const owner = args[0];
+const repo_name = args[1];
+const sha_commit = args[2];
 
-var oauthToken = process.env.OAUTH_TOKEN;
+const oauthToken = process.env.OAUTH_TOKEN;
 // unauthenticated client
 const gh = new GitHub({
-  token: oauthToken
+  token: oauthToken,
 });
 
 
-var repo = gh.getRepo(owner,repo_name);
+const repo = gh.getRepo(owner, repo_name);
 repo.updateStatus(sha_commit, {
-  "state": "success",
-  "target_url": "https://example.com/build/status",
-  "description": "The build succeeded!",
-  "context": "gcr.io/kzn-appsruntime-techradar/github-" + owner + "-" + repo_name
+  state: 'success',
+  target_url: 'https://example.com/build/status',
+  description: 'The build succeeded!',
+  context: `gcr.io/kzn-appsruntime-techradar/github-${owner}-${repo_name}`,
 }).then((resp) => {
   console.log('%s: %s', resp.status, resp.statusText);
 }, (error) => {
   console.log(error);
 });
-
-
 
 
 // let gist = gh.getGist(); // not a gist yet

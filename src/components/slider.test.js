@@ -1,7 +1,7 @@
 import React from 'react';
-import ContentSlider from './slider';
 import enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import ContentSlider from './slider';
 
 enzyme.configure({ adapter: new Adapter() });
 
@@ -20,13 +20,12 @@ describe('<ContentSlider /> Component', () => {
 
   it('should ADD a "keyDown" listener on the "document" object when component mounts', () => {
     const spy = jest.fn();
-    let wrapper;
     global.document.addEventListener = spy;
 
     expect(spy).not.toHaveBeenCalled();
-    wrapper = shallow(<ContentSlider />).instance();
+    const wrapper = shallow(<ContentSlider />).instance();
 
-    expect(spy).toBeCalledWith("keydown", wrapper.handleKeyDown);
+    expect(spy).toBeCalledWith('keydown', wrapper.handleKeyDown);
     spy.mockReset();
     spy.mockRestore();
   });
@@ -41,7 +40,7 @@ describe('<ContentSlider /> Component', () => {
 
     wrapper.componentWillUnmount();
 
-    expect(spy).toBeCalledWith("keydown", wrapper.handleKeyDown);
+    expect(spy).toBeCalledWith('keydown', wrapper.handleKeyDown);
     spy.mockReset();
     spy.mockRestore();
   });
@@ -51,10 +50,10 @@ describe('<ContentSlider /> Component', () => {
       const wrapper = shallow(<ContentSlider />).instance();
       const mockNext = jest.fn();
 
-      wrapper.slider = {slickNext: mockNext}
+      wrapper.slider = { slickNext: mockNext };
       expect(mockNext).not.toHaveBeenCalled();
 
-      wrapper.handleKeyDown({key: "ArrowRight"});
+      wrapper.handleKeyDown({ key: 'ArrowRight' });
 
       expect(mockNext).toHaveBeenCalled();
 
@@ -66,10 +65,10 @@ describe('<ContentSlider /> Component', () => {
       const wrapper = shallow(<ContentSlider />).instance();
       const mockPrev = jest.fn();
 
-      wrapper.slider = {slickPrev: mockPrev}
+      wrapper.slider = { slickPrev: mockPrev };
       expect(mockPrev).not.toHaveBeenCalled();
 
-      wrapper.handleKeyDown({key: "ArrowLeft"});
+      wrapper.handleKeyDown({ key: 'ArrowLeft' });
 
       expect(mockPrev).toHaveBeenCalled();
 
