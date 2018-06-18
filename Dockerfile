@@ -18,8 +18,7 @@ RUN export CI=true && \
   npm run-script test
 
 #TESTS PASS, CALL COMMIT API TO MARK PASSING build
-RUN ls -la /playbook && \
-  . /playbook/.env && \
+RUN . /playbook/.env && \
   node /playbook/src/status.js $sha_commit
 
 RUN cd /playbook && rm .env
