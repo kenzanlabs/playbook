@@ -24,7 +24,7 @@ repo.updateStatus(sha_commit, {
   "state": "success",
   "target_url": "https://example.com/build/status",
   "description": "The build succeeded!",
-  "context": "gcr.io/kzn-appsruntime-techradar/github-kenzanlabs-playbook"
+  "context": "gcr.io/kzn-appsruntime-techradar/github-" + owner + "-" + repo
 }).then((resp) => {
   console.log('%s: %s', resp.status, resp.statusText);
 }, (error) => {
