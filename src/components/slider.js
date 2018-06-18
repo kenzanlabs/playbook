@@ -51,6 +51,8 @@ export default class ContentSlider extends React.Component {
                         <li>Provides custom E2E solutions that align technical strategy with business goals</li>
                         <li>Craft solutions leveraging cutting-edge technology</li>
                     </ul>
+                </div>
+                <div className="App-section intro">
                     <img className="ci" src="/images/continuous.png" alt="Continuous Delivery (© Thoughtworks)" />
                     <h2 className="section-header capitalize">The PMBA role expanded:</h2>
                     <ul>
@@ -91,21 +93,17 @@ export default class ContentSlider extends React.Component {
                 <div className="App-section dev-ci">
                     <h2 className="section-header capitalize">Development with Continuous Integration</h2>
                     <div>
-                        <p>At Kenzan, Continuous Integration (CI) plays a crucial role here. As complexity and number of features increase, the importance of CI does as well. With large distributed teams CI is a neccessity</p>
-
-                        <p>The Development phase can be broken into many steps:</p>
+                        <img className="tools" src="/images/gears.png" alt="Gears" />
+                        <p>At Kenzan, Continuous Integration (CI) plays a crucial role</p>
+                        <h3 className="section-subheader">What happens in this phase?</h3>
                         <ul>
                             <li>Creating a feature branch</li>
-                            <li>Writing code</li>
-                            <li>Writing unit tests</li>
-                            <li>Writing integration tests</li>
-                            <li>Testing changes locally</li>
+                            <li>Writing code & tests</li>
+                            <li>Local testing</li>
                             <li>Commiting changes to source control</li>
-                            <li>Pushing committed changes to remote shared repository</li>
-                            <li>Create pull requests</li>
+                            <li>Creating pull requests</li>
                         </ul>
-
-                        <p>Like anything else, tools play a crucial role in the success of development and continuous integration</p>
+                        <h3 className="section-subheader">Tools</h3>
                         <ul>
                             <li>Git</li>
                             <li>Github</li>
@@ -116,9 +114,10 @@ export default class ContentSlider extends React.Component {
                     </div>
                 </div>
                 <div className="App-section review-ci">
-                    <h2 className="section-header capitalize">In Review with Continuous Integration</h2>
+                    <h2 className="section-header capitalize">Review Process</h2>
                     <div>
-                        The review phase of the lifecyle can be broken into a few steps:
+                        <img className="improvement" src="/images/continuousimprovement.png" alt="Continuous Improvement" />
+                        <h3 className="section-subheader">What happens in this phase?</h3>
                         <ul>
                             <li>Reviewing code</li>
                             <li>Collaborating on feedback</li>
@@ -130,22 +129,24 @@ export default class ContentSlider extends React.Component {
                     </div>
                 </div>
                 <div className="App-section done-ci">
-                    <h2 className="section-header capitalize">Done with CI [Accepted]</h2>
+                    <h2 className="section-header capitalize">Done</h2>
                     <div>
-                        The Done phase of the lifecyle can be broken into a few steps:
+                        <img className="done" src="/images/dod.png" alt="Definition of Done" />
+                        <p>Done can have a very different meaning to different organizations. </p>
+                        <h3 className="section-subheader">Kenzan's Definition of Done</h3>
                         <ul>
-                            <li>Approving PR</li>
-                            <li>Merging PR</li>
-                            <li>Deploying PR</li>
+                            <li>Approved pull request</li>
+                            <li>Merged pull request</li>
+                            <li>Deployed Feature (Not necessarily to production!)</li>
                         </ul>
                     </div>
+                </div>
+                <div className="App-section summary">
+                    <h2 className="section-header capitalize">In Summary</h2>
                     <div>
-                        <h3>Summary</h3>
-                        <div>
-                            Summary
+                        Summary
                     </div>
                 </div>
-            </div>
             </Slider>
         );
     }

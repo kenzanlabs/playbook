@@ -35,7 +35,7 @@
 }
 
 img.process {
-    width: 400px;
+    width: 500px;
     float:right;
 }
 img.ci {
@@ -46,6 +46,22 @@ img.ci {
 img.planningprocess {
     width: 400px;
     float:right;
+    margin-top:30px;
+}
+img.tools {
+    width: 500px;
+    float:right;
+    margin-top:40px;
+}
+img.improvement {
+    width: 500px;
+    float:right;
+    margin-top:40px;
+}
+img.done {
+    width: 500px;
+    float:right;
+    margin-top:40px;
 }
 p.intro {
     position: relative;

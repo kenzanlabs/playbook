@@ -43,32 +43,36 @@
 
 /* ********     MAIN    ******** */
 
-.Main {
-    margin-top: 20px;
-}
 
 .App-section {
-    font-size: 1.25em;
+    font-size: 1.5em;
 }
 
 .App-section ul {
     padding-left: 2%;
-    list-style: none;
+   //list-style: none;
+}
+
+.App-section ul li {
+    margin-bottom:5px;
 }
 
 .section-header {
     color: #333f49;
     line-height: 150%;
     font-size: 2.75vh;
-    text-shadow: 1px 2px 1.5px rgba(0,0,0,0.3);
-    padding: 5px 0;
+    text-shadow: 1px 2px 1.5px rgba(0,0,0,0.2);
+    padding: 12px 0;
 }
 
 .section-subheader {
     font-weight: bold;
-    font-size: 2vh;
-    padding: 5px 0;
+    font-size: 2.5vh;
+    padding: 15px 0;
+    text-shadow: 1px 2px 1.5px rgba(0,0,0,0.1);
+
 }
+
 
 /* ********     UTILS    ******** */
 .capitalize {
