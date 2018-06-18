@@ -17,7 +17,7 @@ ADD ./ /playbook
 RUN export CI=true && \
   cd /playbook && \
   npm install && \
-  npm run-script test
+  npm test -- --coverage
 
 #TESTS PASS, CALL COMMIT API TO MARK PASSING build
 RUN . /playbook/.env && \
