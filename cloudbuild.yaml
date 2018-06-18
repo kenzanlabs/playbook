@@ -15,7 +15,7 @@ steps:
 
 # Uses the docker build step to build an image called my-image
 - name: gcr.io/cloud-builders/docker
-  args: ['build', '--build-arg','sha_commit=$COMMIT_SHA owner=$_REPO repo=$_REPO', '-t', 'gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA', '.']
+  args: ['build', '--build-arg','sha_commit=$COMMIT_SHA owner=$_OWNER repo=$_REPO', '-t', 'gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA', '.']
 
 
 # my-image is pushed to Container Registry
