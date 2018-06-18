@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-
-import enzyme, { shallow, mount } from 'enzyme';
+import enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import App from './App';
 
 enzyme.configure({ adapter: new Adapter() });
 
@@ -35,7 +34,7 @@ describe('<App /> Component', () => {
 
     it('should have a "<h1/>" element', () => {
       const wrapper = mount(<App />);
-      const expectedTitle = "CI Demystified ";
+      const expectedTitle = 'CI Demystified ';
 
       expect(wrapper.find('h1').length).toEqual(1);
       expect(wrapper.find('h1').text()).toEqual(expectedTitle);
@@ -43,7 +42,7 @@ describe('<App /> Component', () => {
 
     it('should have a "<p/>" element', () => {
       const wrapper = mount(<App />);
-      const expecteText = "How Kenzan uses continuous integration to support the agile lifecycle";
+      const expecteText = 'How Kenzan uses continuous integration to support the agile lifecycle';
 
       expect(wrapper.find('p').first().text()).toEqual(expecteText);
     });
