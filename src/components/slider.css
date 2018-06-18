@@ -1,5 +1,5 @@
 .slick-slider {
-    padding-top:60px;
+    padding-top:10px;
     text-align: left;
 }
 .slick-prev:before, .slick-next:before {
@@ -20,7 +20,7 @@
     right: -80px;
 }
 .slick-dots {
-    top: 30px;
+  bottom: 0px;
 }
 .slick-dots li {
     margin: 0 15px;
@@ -32,4 +32,42 @@
 
 .slick-dots li button:before {
     font-size:20px;
+}
+
+img.process {
+    width: 500px;
+    float:right;
+}
+img.ci {
+    width: 400px;
+    float:left;
+    margin-right:80px;
+}
+img.planningprocess {
+    width: 400px;
+    float:right;
+    margin-top:30px;
+}
+img.tools {
+    width: 500px;
+    float:right;
+    margin-top:40px;
+}
+img.improvement {
+    width: 500px;
+    float:right;
+    margin-top:40px;
+}
+img.done {
+    width: 500px;
+    float:right;
+    margin-top:40px;
+}
+p.intro {
+    position: relative;
+    z-index: 2;
+}
+
+h2 {
+    font-size:1.2em;
 }
