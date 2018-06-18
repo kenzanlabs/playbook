@@ -1,67 +1,87 @@
-/*Header font color # f79520*/
+/*!*Header font color # f79520*!*/
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans|Roboto|Source+Sans+Pro|Sunflower:300');
 
-* {
-    padding: 0;
-    margin: 0;
+.App {
     font-family: 'Sunflower', 'sans-serif';
 }
 
+/* ********     HEADER ******** */
+
 .App-header {
-    min-height: 30vh;
+    padding: 0 10%;
+    min-height: 20vh;
     display: flex;
     flex-flow: row wrap;
+    flex-direction: row;
     background-color: #333f49;
-    padding: 0 5%;
+    color: #f3f3f4;
 }
 
 .Header-item {
-    flex: 1 auto;
-    position: relative;
-    padding:0 10px;
-}
-
-.logo-wrapper {
-    justify-content: space-between;
-    width: 5vw;
-}
-
-.logo-wrapper img {
-    max-height: 25vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.title-wrapper {
-    flex-grow: 2;
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+.logo-wrapper {
+
+}
+
+.logo-wrapper img {
+    height: 15vh;
+}
+
+.title-wrapper {
     text-align: left;
+    padding-left: 25px;
 }
 
 .App-title {
     color: #f79520;
-    font-size: 4.5vw;
+    font-size: 2.5vw;
 }
 
 .App-motto {
-    font-size: 2.5vw;
+    font-size: 1.5vw;
+}
+
+/* ********     MAIN    ******** */
+
+.Main {
+    margin-top: 20px;
+}
+
+.App-section {
+    font-size: 1.25em;
+}
+
+.App-section ul {
+    padding-left: 2%;
+    list-style: none;
 }
 
 .section-header {
     color: #333f49;
     line-height: 150%;
-    font-size: 4vh;
+    font-size: 2.75vh;
+    text-shadow: 1px 2px 1.5px rgba(0,0,0,0.3);
+    padding: 5px 0;
 }
 
-.Main p {
-    font-size: 1.25em;
+.section-subheader {
+    color: #333f49;
+    font-weight: bold;
+    line-height: 150%;
+    font-size: 2vh;
+    padding: 5px 0;
 }
 
-/*Utils*/
+/* ********     UTILS    ******** */
 .capitalize {
     text-transform: uppercase;
+}
+
+.slick-dots button{
+    position: absolute;
+    margin-top: 5vh;
 }

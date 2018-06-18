@@ -14,7 +14,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
             <div className="Header-item logo-wrapper">
-              <img className="kenzanlogo" src={kenzanLogo} alt="Kenzan Media LLC" />
+              <img className="App-logo" src={kenzanLogo} alt="Kenzan Media LLC" />
             </div>
             <div className="Header-item title-wrapper">
               <h1 className="App-title capitalize">CI Demystified </h1>
