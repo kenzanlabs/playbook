@@ -1,0 +1,23 @@
+steps:
+
+## Decrypt the environment
+- name: gcr.io/cloud-builders/gcloud
+  args:
+  - kms
+  - decrypt
+  - --ciphertext-file=.env.enc
+  - --plaintext-file=.env
+  - --location=global
+  - --keyring=kzn-playbook
+  - --key=kzn-playbook-build-key
+
+
+
+# Uses the docker build step to build an image called my-image
+- name: gcr.io/cloud-builders/docker
+  args: ['build', '--build-arg','sha_commit=$COMMIT_SHA', '--build-arg', 'owner=$_OWNER', '--build-arg', 'repo=$_REPO', '-t', 'gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA', '.']
+
+
+# my-image is pushed to Container Registry
+images:
+- 'gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA'
