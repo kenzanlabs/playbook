@@ -16,22 +16,14 @@ RUN npm -v
 ADD ./ /playbook
 
 #TESTS
-RUN export CI=true && \
-  cd /playbook && \
-  npm install && \
-  npm run-script lint && \
-  npm test -- --coverage
-
-#TESTS PASS, CALL COMMIT API TO MARK PASSING build
-RUN . /playbook/.env && \
-  node /playbook/src/status.js $owner $repo $sha_commit
-
-RUN cd /playbook && rm .env
+RUN cd /playbook && \
+   . ./.env && \
+   rm ./.env && \
+   sh ./build.sh  $owner $repo $sha_commit
 
 
 #BUILD
 RUN cd /playbook && npm run-script build
-
 
 
 
