@@ -46,36 +46,35 @@ describe('<ContentSlider /> Component', () => {
   });
 
   /* TODO: Uncomment below SECOND. (Unit tests for Keyboard activation) */
-  // describe('handleKeyDown method', () => {
-  //   it('triggers the "handleRightClick" method when called ', () => {
-  //     const wrapper = shallow(<ContentSlider />).instance();
-  //     const mockNext = jest.fn();
-  //
-  //     wrapper.slider = { slickNext: mockNext };
-  //     expect(mockNext).not.toHaveBeenCalled();
-  //
-  //     wrapper.handleKeyDown({ key: 'ArrowRight' });
-  //
-  //     expect(mockNext).toHaveBeenCalled();
-  //
-  //     mockNext.mockReset();
-  //     mockNext.mockRestore();
-  //   });
-  //
-  //   it('triggers the "handleLeftClick" method when called ', () => {
-  //     const wrapper = shallow(<ContentSlider />).instance();
-  //     const mockPrev = jest.fn();
-  //
-  //     wrapper.slider = { slickPrev: mockPrev };
-  //     expect(mockPrev).not.toHaveBeenCalled();
-  //
-  //     wrapper.handleKeyDown({ key: 'ArrowLeft' });
-  //
-  //     expect(mockPrev).toHaveBeenCalled();
-  //
-  //     mockPrev.mockReset();
-  //     mockPrev.mockRestore();
-  //   });
-  // });
-});
+  describe('handleKeyDown method', () => {
+    it('triggers the "handleRightClick" method when called ', () => {
+      const wrapper = shallow(<ContentSlider />).instance();
+      const mockNext = jest.fn();
 
+      wrapper.slider = { slickNext: mockNext };
+      expect(mockNext).not.toHaveBeenCalled();
+
+      wrapper.handleKeyDown({ key: 'ArrowRight' });
+
+      expect(mockNext).toHaveBeenCalled();
+
+      mockNext.mockReset();
+      mockNext.mockRestore();
+    });
+
+    it('triggers the "handleLeftClick" method when called ', () => {
+      const wrapper = shallow(<ContentSlider />).instance();
+      const mockPrev = jest.fn();
+
+      wrapper.slider = { slickPrev: mockPrev };
+      expect(mockPrev).not.toHaveBeenCalled();
+
+      wrapper.handleKeyDown({ key: 'ArrowLeft' });
+
+      expect(mockPrev).toHaveBeenCalled();
+
+      mockPrev.mockReset();
+      mockPrev.mockRestore();
+    });
+  });
+});
