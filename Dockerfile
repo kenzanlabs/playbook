@@ -9,6 +9,8 @@ RUN echo "SHA_COMMIT: $sha_commit"
 
 #DEPENDENCIES
 RUN npm install -g serve
+RUN serve -v
+RUN npm -v
 
 #COPY PROJECT
 ADD ./ /playbook
@@ -31,6 +33,8 @@ RUN cd /playbook && rm .env
 RUN cd /playbook && npm run-script build
 
 
+
+
 ## ENTRY / EXPOS
-ENTRYPOINT ["serve","-s","/playbook/build"]
+ENTRYPOINT ["serve","-l","3000","-s","/playbook/build"]
 EXPOSE 3000
