@@ -25,8 +25,6 @@ export default class ContentSlider extends React.Component {
     } else if (e.key === 'ArrowLeft') {
       this.slider.slickPrev();
     }
-
-    console.log(this, e);
   }
 
   render() {
