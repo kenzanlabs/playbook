@@ -8,7 +8,6 @@ export default class ContentSlider extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
-
   // As soon as the component mounts, `mySlider` will be focused.
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown);
@@ -20,11 +19,14 @@ export default class ContentSlider extends React.Component {
 
   handleKeyDown(e) {
     /* TODO: Uncomment below FIRST. (Functionality for Keyboard slider controls) */
+
     // if (e.key === 'ArrowRight') {
     //   this.slider.slickNext();
     // } else if (e.key === 'ArrowLeft') {
     //   this.slider.slickPrev();
     // }
+
+    console.log(this, e);
   }
 
   render() {
