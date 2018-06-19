@@ -15,7 +15,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint" : "node_modules/.bin/eslint ."
+    "lint": "node_modules/.bin/eslint ."
   },
   "devDependencies": {
     "enzyme-adapter-react-16": "^1.1.1",
