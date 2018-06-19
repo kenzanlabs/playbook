@@ -68,6 +68,9 @@ img.githubflow {
     float:right;
     margin-top:40px;
 }
+.ciintro {
+    clear:both
+}
 p.intro {
     position: relative;
     z-index: 2;

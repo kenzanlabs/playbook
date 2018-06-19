@@ -8,7 +8,6 @@ export default class ContentSlider extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
-
   // As soon as the component mounts, `mySlider` will be focused.
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown);
@@ -19,11 +18,15 @@ export default class ContentSlider extends React.Component {
   }
 
   handleKeyDown(e) {
-    if (e.key === 'ArrowRight') {
-      this.slider.slickNext();
-    } else if (e.key === 'ArrowLeft') {
-      this.slider.slickPrev();
-    }
+    /* TODO: Uncomment below FIRST. (Functionality for Keyboard slider controls) */
+
+    // if (e.key === 'ArrowRight') {
+    //   this.slider.slickNext();
+    // } else if (e.key === 'ArrowLeft') {
+    //   this.slider.slickPrev();
+    // }
+
+    console.log(this, e);
   }
 
   render() {
@@ -55,21 +58,23 @@ export default class ContentSlider extends React.Component {
         </div>
         <div className="App-section intro">
           <img className="ci" src="/images/continuous.png" alt="Continuous Delivery (© Thoughtworks)" />
-          <h2 className="section-header capitalize">The PMBA role expanded:</h2>
-          <ul>
-            <li>Relies heavily on agile methodology & scrum framework</li>
-            <li>Minimize risks to schedule delays, budget overruns, quality issues, and scope creep</li>
-            <li>Facilitate project-related communication (including cross-functional communication)</li>
-            <li>Maximize project team participation and ownership</li>
-            <li>Standardize processes to manage client expectation</li>
-          </ul>
-          <h2 className="section-header capitalize">What is Continuous Integration?</h2>
+          <h2 className="section-header capitalize ">What is Continuous Integration?</h2>
           <ul>
             <li>Development practice of integrating code multiple times a day</li>
             <li>Automating testing and builds on each commit</li>
             <li>Identifies issues much quicker in the process</li>
             <li>Makes locating issues significantly easier</li>
           </ul>
+          <div className="ciintro">
+            <h2 className="section-header capitalize">The PMBA role expanded:</h2>
+            <ul>
+              <li>Relies heavily on agile methodology & scrum framework</li>
+              <li>Minimize risks to schedule delays, budget overruns, quality issues, and scope creep</li>
+              <li>Facilitate project-related communication (including cross-functional communication)</li>
+              <li>Maximize project team participation and ownership</li>
+              <li>Standardize processes to manage client expectation</li>
+            </ul>
+          </div>
         </div>
         <div className="App-section planning">
           <h2 className="section-header capitalize">Planning</h2>
