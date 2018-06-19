@@ -104,7 +104,7 @@ export default class ContentSlider extends React.Component {
               <li>Writing tests</li>
               <li>Local testing</li>
               <li>Committing changes to source control (We recommend GIT)</li>
-              <li>Running CI pipeline on commit (Build, Lint, Test)</li>
+              <li>Running CI pipeline on commit (Build, Code Style Check, Test)</li>
               <li>Creating pull requests</li>
             </ul>
           </div>
