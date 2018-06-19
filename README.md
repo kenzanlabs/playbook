@@ -1,18 +1,29 @@
 # Kenzan Agile Playbook
+Kenzan's Agile Playbook coveraging CI and how it plays a role in the overall agile lifecycle.  
 
 ## Installation
+After pulling down the repo make sure to run the following: 
+
 ```npm install```
 
 ## Run locally in debug mode
+To run a local server for this application run the following:
 
 ```npm start```
 
-## Run test
+This setup will hot reload changes as they are saved in your IDE without needing to restart the server.
 
-```npm run-script test```
+## Run test
+To run unit tests alone with code coverage reporting, run the following:
+
+```npm run-script test -- --coverage```
+
+## Run linting
+To run linting alone with eslint alone, run the following:
+```npm run-script lint```
 
 ## Production build
-
+To package up the build for production deployment, run the following:
 ```npm run-script build```
 
 
