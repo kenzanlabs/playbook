@@ -63,6 +63,11 @@ img.done {
     float:right;
     margin-top:40px;
 }
+img.githubflow {
+    width: 500px;
+    float:right;
+    margin-top:40px;
+}
 p.intro {
     position: relative;
     z-index: 2;

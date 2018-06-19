@@ -103,15 +103,8 @@ export default class ContentSlider extends React.Component {
               <li>Writing code & tests</li>
               <li>Local testing</li>
               <li>Commiting changes to source control</li>
+              <li>Running CI pipeline on commit (Build, Test, Lint)</li>
               <li>Creating pull requests</li>
-            </ul>
-            <h3 className="section-subheader">Tools</h3>
-            <ul>
-              <li>Git</li>
-              <li>Github</li>
-              <li>Spinnaker</li>
-              <li>Jenkins</li>
-              <li>Google Cloud (GCP)</li>
             </ul>
           </div>
         </div>
@@ -124,7 +117,7 @@ export default class ContentSlider extends React.Component {
               <li>Reviewing code</li>
               <li>Collaborating on feedback</li>
               <li>Resolving integrated build failures</li>
-              <li>Resolving unit / integrated test failures</li>
+              <li>Resolving test / linting failures</li>
               <li>Resolving bugs / gaps</li>
               <li>Resolving conflicts</li>
             </ul>
@@ -135,18 +128,35 @@ export default class ContentSlider extends React.Component {
           <div>
             <img className="done" src="/images/dod.png" alt="Definition of Done" />
             <p>Done can have a very different meaning to different organizations. </p>
-            <h3 className="section-subheader">Kenzan's Definition of Done</h3>
+            <h3 className="section-subheader">Kenzan's Done Checklist</h3>
             <ul>
-              <li>Approved pull request</li>
-              <li>Merged pull request</li>
-              <li>Deployed Feature (Not necessarily to production!)</li>
+              <li>Code is written in full for the feature (including all acceptance criteria)</li>
+              <li>Code is checked into source control</li>
+              <li>Code is peer reviewed and meets set development standards</li>
+              <li>Code builds without errors, Unit tests are written and tests pass</li>
+              <li>Code is deployed to appropriate environment and passes integration testing</li>
+              <li>Any changes are documented, Remaining estimated hours in the ticket are set to zero, ticket is closed</li>
             </ul>
           </div>
         </div>
         <div className="App-section summary">
           <h2 className="section-header capitalize">In Summary</h2>
           <div>
-                        Summary
+            <img className="githubflow" src="/images/githubflow.png" alt="Github Flow" />
+            <p> As teams become distributed and grow in size, the simple process we walked through today becomes exponentially more complex. </p>
+            <h3 className="section-subheader">Key Takeways</h3>
+            <ul>
+              <li>Complex projects with large distributed teams make CI a MUST!</li>
+              <li>Cant do CI alone
+                <ul>
+                  <li>Agile best practices</li>
+                  <li>Solid processes (PR Process, Peer Review)</li>
+                  <li>Continuous integration</li>
+                </ul>
+              </li>
+              <li>Embrace automation</li>
+              <li>Embrace tools</li>
+            </ul>
           </div>
         </div>
       </Slider>
