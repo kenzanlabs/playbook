@@ -19,11 +19,12 @@ export default class ContentSlider extends React.Component {
   }
 
   handleKeyDown(e) {
-    if (e.key === 'ArrowRight') {
-      this.slider.slickNext();
-    } else if (e.key === 'ArrowLeft') {
-      this.slider.slickPrev();
-    }
+    /* TODO: Uncomment below FIRST. (Functionality for Keyboard activation) */
+    // if (e.key === 'ArrowRight') {
+    //   this.slider.slickNext();
+    // } else if (e.key === 'ArrowLeft') {
+    //   this.slider.slickPrev();
+    // }
   }
 
   render() {
