@@ -100,10 +100,11 @@ export default class ContentSlider extends React.Component {
             <h3 className="section-subheader">What happens in this phase?</h3>
             <ul>
               <li>Creating a feature branch</li>
-              <li>Writing code & tests</li>
+              <li>Writing code</li>
+              <li>Writing tests</li>
               <li>Local testing</li>
-              <li>Commiting changes to source control</li>
-              <li>Running CI pipeline on commit (Build, Test, Lint)</li>
+              <li>Committing changes to source control (We recommend GIT)</li>
+              <li>Running CI pipeline on commit (Build, Lint, Test)</li>
               <li>Creating pull requests</li>
             </ul>
           </div>
