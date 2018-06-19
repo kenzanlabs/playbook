@@ -17,6 +17,7 @@ ADD ./ /playbook
 RUN export CI=true && \
   cd /playbook && \
   npm install && \
+  npm run-script lint && \
   npm test -- --coverage
 
 #TESTS PASS, CALL COMMIT API TO MARK PASSING build
